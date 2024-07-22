@@ -21,12 +21,10 @@ jobs:
       - name: Install homebrew 2
         run: brew install mono-libgdiplus 
 
-      - name: Install .NET SDK (1)
-        run: brew tap homebrew/cask-versions
-        
-      - name: Install .NET SDK (2)
-        run: brew install --cask dotnet-sdk
-
+      - name: Install .NET SDK
+        run: brew tap homebrew/cask-versions |
+             brew install --cask dotnet-sdk
+    
       - name: Build
         run: cd PKHeX.iOS |
              dotnet build
