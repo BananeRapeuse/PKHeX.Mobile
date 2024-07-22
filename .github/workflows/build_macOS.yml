@@ -1,0 +1,27 @@
+name: iOS starter workflow
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    name: Build and Test default scheme using any available iPhone simulator
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+        name: Install brews
+        run: brew install mono
+             brew install mono-libgdiplus
+
+      - name: Build
+        run: cd PKHeX.Mobile
+             dotnet clean
+             dotnet build
+             dotnet build -c Release
+      - 
