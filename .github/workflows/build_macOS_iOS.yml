@@ -20,7 +20,5 @@ jobs:
              brew install mono-libgdiplus
 
       - name: Build
-        run: cd PKHeX.Mobile |
-             dotnet clean |
-             dotnet build |
-             dotnet build -c Release
+        run: cd PKHeX.iOS |
+             dotnet build
