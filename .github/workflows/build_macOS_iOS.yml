@@ -15,9 +15,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install homebrews
-        run: brew install mono |
-             brew install mono-libgdiplus
+      - name: Install homebrew 1
+        run: brew install mono 
+
+       - name: Install homebrew 2
+        run: brew install mono-libgdiplus 
 
       - name: Build
         run: cd PKHeX.iOS |
