@@ -1,4 +1,4 @@
-name: iOS starter workflow
+name: Build
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: Build and Test default scheme using any available iPhone simulator
+    name: Build
     runs-on: macos-latest
 
     steps:
@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install brews
-        run: brew install mono
+        run: brew install mono |
              brew install mono-libgdiplus
 
       - name: Build
