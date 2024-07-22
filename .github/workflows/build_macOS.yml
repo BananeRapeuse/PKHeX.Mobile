@@ -24,4 +24,3 @@ jobs:
              dotnet clean
              dotnet build
              dotnet build -c Release
-      - 
